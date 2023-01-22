@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient">
+
+
+    <Button
+        android:id="@+id/lunch_button"
+        android:layout_width="373dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@android:color/black"
+
+        android:text="Meal Two"
+        android:textSize="29sp"
+        app:layout_constraintBottom_toTopOf="@+id/dinner_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breakfast_button"
+        app:layout_constraintVertical_bias="0.479" />
+
+    <Button
+        android:id="@+id/breakfast_button"
+        android:layout_width="373dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@android:color/black"
+        android:text="Meal One"
+        android:textSize="29sp"
+        app:layout_constraintBottom_toTopOf="@+id/dinner_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054" />
+
+    <Button
+        android:id="@+id/dinner_button"
+        android:layout_width="373dp"
+        android:layout_height="71dp"
+
+        android:layout_marginBottom="244dp"
+        android:backgroundTint="@android:color/black"
+        android:text="Meal Three"
+        android:textSize="29sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.368"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/goal_display_button"
+        android:layout_width="169dp"
+        android:layout_height="81dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@android:color/black"
+        android:text="Goal display"
+        android:textSize="18sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/caloric_breakdown_button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/caloric_breakdown_button"
+        android:layout_width="169dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@android:color/black"
+        android:text="Caloric Breakdown"
+        android:textSize="18sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/goal_display_button" />
+
+    <TextView
+        android:id="@+id/breakfastFatValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="300dp"
+        android:text="298"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/breakfast_button"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/breakfastProteinValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="24dp"
+        android:text="235"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breakfast_button" />
+
+    <TextView
+        android:id="@+id/breakfastCarbsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:fontFamily="cursive"
+        android:text="Carbs:"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toStartOf="@+id/breakfastCarbsValue"
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintStart_toEndOf="@+id/breakfastFatValue"
+        app:layout_constraintTop_toBottomOf="@+id/breakfast_button" />
+
+    <TextView
+        android:id="@+id/breakfastFatText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:fontFamily="cursive"
+        android:text="Fats:"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toStartOf="@+id/breakfastFatValue"
+        app:layout_constraintHorizontal_bias="0.577"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breakfast_button" />
+
+    <TextView
+        android:id="@+id/breakfastProteinText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="cursive"
+        android:text="Protein:"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toStartOf="@+id/breakfastProteinValue"
+        app:layout_constraintTop_toBottomOf="@+id/breakfast_button" />
+
+    <TextView
+        android:id="@+id/breakfastCarbsValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="156dp"
+        android:text="133"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breakfast_button" />
+
+    <TextView
+        android:id="@+id/lunchFatText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="cursive"
+        android:text="Fats:"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/dinnerFatText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastFatText"
+        app:layout_constraintVertical_bias="0.48" />
+
+    <TextView
+        android:id="@+id/lunchCarbsValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="352"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/dinnerCarbsValue"
+        app:layout_constraintStart_toEndOf="@+id/lunchCarbsText"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastCarbsValue"
+        app:layout_constraintVertical_bias="0.483" />
+
+    <TextView
+        android:id="@+id/lunchFatValue"
+        android:layout_width="41dp"
+        android:layout_height="27dp"
+        android:text="103"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/dinnerFatValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toEndOf="@+id/lunchFatText"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastFatValue"
+        app:layout_constraintVertical_bias="0.487" />
+
+    <TextView
+        android:id="@+id/lunchProteinValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="64"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/dinnerProteinValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/lunchProteinText"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastProteinValue"
+        app:layout_constraintVertical_bias="0.483" />
+
+    <TextView
+        android:id="@+id/lunchProteinText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:fontFamily="cursive"
+        android:text="Protein:"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/dinnerProteinText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastProteinText"
+        app:layout_constraintVertical_bias="0.485" />
+
+    <TextView
+        android:id="@+id/lunchCarbsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="Carbs:"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/dinnerCarbsText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toEndOf="@+id/lunchFatValue"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastCarbsText"
+        app:layout_constraintVertical_bias="0.483" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Caloric Breakdown:"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/dinner_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lunch_button"
+        app:layout_constraintVertical_bias="0.631" />
+
+    <TextView
+        android:id="@+id/dinnerCarbsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="37dp"
+        android:fontFamily="cursive"
+        android:text="Carbs:"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/goal_display_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toEndOf="@+id/dinnerFatValue"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastCarbsText"
+        app:layout_constraintVertical_bias="0.982" />
+
+    <TextView
+        android:id="@+id/dinnerProteinValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="37dp"
+        android:text="124"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/caloric_breakdown_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toEndOf="@+id/dinnerProteinText"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastProteinValue"
+        app:layout_constraintVertical_bias="0.982" />
+
+    <TextView
+        android:id="@+id/dinnerProteinText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="37dp"
+        android:fontFamily="cursive"
+        android:text="Protein:"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/goal_display_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.289"
+        app:layout_constraintStart_toEndOf="@+id/dinnerCarbsValue"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastProteinText"
+        app:layout_constraintVertical_bias="0.982" />
+
+    <TextView
+        android:id="@+id/dinnerFatText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="cursive"
+        android:text="Fats:"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/goal_display_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastFatText"
+        app:layout_constraintVertical_bias="0.982" />
+
+    <TextView
+        android:id="@+id/dinnerFatValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="37dp"
+        android:text="131"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/goal_display_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toEndOf="@+id/dinnerFatText"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastFatValue"
+        app:layout_constraintVertical_bias="0.982" />
+
+    <TextView
+        android:id="@+id/dinnerCarbsValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="35dp"
+        android:text="474"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/goal_display_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toEndOf="@+id/dinnerCarbsText"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastCarbsValue"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginBottom="74dp"
+        android:text="Caloric Breakdown:"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/goal_display_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dinner_button"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/caloriesText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="cursive"
+        android:text="Calories:"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.382"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breakfast_button" />
+
+    <TextView
+        android:id="@+id/breakfastCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="666"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toEndOf="@+id/caloriesText1"
+        app:layout_constraintTop_toBottomOf="@+id/breakfast_button" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Caloric Breakdown:"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/breakfastCarbsText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caloriesText1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="Calories:"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView28"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.382"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lunch_button"
+        app:layout_constraintVertical_bias="0.055" />
+
+    <TextView
+        android:id="@+id/lunchCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="152dp"
+        android:text="519"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/dinnerCalories"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lunch_button"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="Calories:"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/goal_display_button"
+        app:layout_constraintEnd_toStartOf="@+id/dinnerCalories"
+        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dinner_button"
+        app:layout_constraintVertical_bias="0.444" />
+
+    <TextView
+        android:id="@+id/dinnerCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="152dp"
+        android:text="729"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toTopOf="@+id/caloric_breakdown_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dinner_button"
+        app:layout_constraintVertical_bias="0.444" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
